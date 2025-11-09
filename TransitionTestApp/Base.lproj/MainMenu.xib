@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17150" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24412" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17150"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24412"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,9 +11,12 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="blueView" destination="7Fr-yh-Nef" id="byA-k6-Ke1"/>
+                <outlet property="containerView" destination="Psd-7O-inQ" id="LP9-mW-ocA"/>
+                <outlet property="cyanView" destination="xAS-1D-KZO" id="5wF-v4-R0F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -684,15 +687,89 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
-            <view key="contentView" id="EiT-Mj-1SZ">
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psd-7O-inQ">
+                        <rect key="frame" x="20" y="20" width="440" height="280"/>
+                        <shadow key="shadow" blurRadius="8">
+                            <size key="offset" width="8" height="8"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </shadow>
+                        <animations>
+                            <caTransition key="subviews">
+                                <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
+S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBILDBUlLjQ1Njc4OTtAQQ4PR0pVJG51bGzUDQ4PEBESExRW
+JGNsYXNzVmZpbHRlclR0eXBlXxASX19DQUNvZGluZ0NvbnRlbnRzgBGAAoAMgA3YDRYXGBkaGxwdHh8g
+ISIjJF8QEkNJX2lucHV0U2hhZG93U2l6ZVxDSV9pbnB1dFRpbWVeQ0lfaW5wdXRFeHRlbnReQ0lfaW5w
+dXRSYWRpdXNfEBRDSV9pbnB1dFNoYWRvd0V4dGVudF8QFENJX2lucHV0U2hhZG93QW1vdW50XUNJX2lu
+cHV0QW5nbGWAC4AIgAWAA4AHgAqACYAG1iYnKCkqDSsrLCsrLVRDSV8yVENJXzBXQ0lDb3VudFRDSV8x
+VENJXzMiAAAAABAEgATSLzAxMlokY2xhc3NuYW1lWCRjbGFzc2VzWENJVmVjdG9yojEzWE5TT2JqZWN0
+Iz/wAAAAAAAAIwAAAAAAAAAAI0BZAAAAAAAAIz/gAAAAAAAAIz/mZmZmZmZm1iYnKCkqDSsrLCsrLYAE
+0i8wPD1fEB5DSVBhZ2VDdXJsV2l0aFNoYWRvd1RyYW5zaXRpb26jPj8zXxAeQ0lQYWdlQ3VybFdpdGhT
+aGFkb3dUcmFuc2l0aW9uWENJRmlsdGVyVGZhZGXSQg1DRlpOUy5vYmplY3RzokRFgA6AD4AQ0i8wSElX
+TlNBcnJheaJIM9IvMEtMXENBVHJhbnNpdGlvbqNNTjNcQ0FUcmFuc2l0aW9uW0NBQW5pbWF0aW9uAAgA
+EQAaACQAKQAyADcASQBMAFEAUwBoAG4AdwB+AIUAigCfAKEAowClAKcAuADNANoA6QD4AQ8BJgE0ATYB
+OAE6ATwBPgFAAUIBRAFRAVYBWwFjAWgBbQFyAXQBdgF7AYYBjwGYAZsBpAGtAbYBvwHIAdEB3gHgAeUC
+BgIKAisCNAI5Aj4CSQJMAk4CUAJSAlcCXwJiAmcCdAJ4AoUAAAAAAAACAQAAAAAAAABPAAAAAAAAAAAA
+AAAAAAACkQ
+</mutableData>
+                            </caTransition>
+                        </animations>
+                    </customView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-A9-VBq">
+                        <rect key="frame" x="19" y="318" width="88" height="23"/>
+                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="star.fill" catalog="system" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w3g-Ur-fK6">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86" id="yhB-To-dqh"/>
+                        </constraints>
+                        <connections>
+                            <action selector="toggleTransition:" target="Voe-Tx-rLC" id="XCF-Q0-mPS"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Psd-7O-inQ" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="60" id="FW5-ok-MmE"/>
+                    <constraint firstItem="TPC-A9-VBq" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" symbolic="YES" id="e7o-mc-KGE"/>
+                    <constraint firstAttribute="bottom" secondItem="Psd-7O-inQ" secondAttribute="bottom" constant="20" symbolic="YES" id="ei8-vi-jAm"/>
+                    <constraint firstAttribute="trailing" secondItem="Psd-7O-inQ" secondAttribute="trailing" constant="20" symbolic="YES" id="gOQ-94-7M4"/>
+                    <constraint firstItem="Psd-7O-inQ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="gbL-gn-Dja"/>
+                    <constraint firstItem="TPC-A9-VBq" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="mbH-hI-J65"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="top-28-M4D"/>
             </connections>
             <point key="canvasLocation" x="200" y="400"/>
         </window>
+        <customView wantsLayer="YES" id="7Fr-yh-Nef" customClass="WILDColorBoxView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                    <color key="value" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-170" y="237"/>
+        </customView>
+        <customView wantsLayer="YES" id="xAS-1D-KZO" customClass="WILDColorBoxView">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="color">
+                    <color key="value" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-172" y="375"/>
+        </customView>
     </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="17" height="16"/>
+    </resources>
 </document>

@@ -22,10 +22,3 @@ point out those exist and were toyed with.
 
 Instead of the "subviews" keys, there may be others, which might work in other cases where
 you aren't adding/removing views.
-
-# LICENSE
-
-This code is in the public domain. It's an example, intended for people to learn from.
-If your country does not allow explicitly placing things in the public domain, I hereby
-give a non-exclusive right to license and sub-license this code, in full or in part, in
-perpetuity.

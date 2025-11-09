@@ -38,9 +38,11 @@
 
 	// This seems to work:
 	if (self.yellowView.superview == nil) {
+        self.yellowView.frame = self.containerView.bounds;
 		[self.containerView.animator addSubview: self.yellowView];
 		[self.blueView.animator removeFromSuperview];
 	} else {
+        self.blueView.frame = self.containerView.bounds;
 		[self.containerView.animator addSubview: self.blueView];
 		[self.yellowView.animator removeFromSuperview];
 	}
@@ -52,6 +54,7 @@
 
 - (void) awakeFromNib {
 	self.window.contentView.wantsLayer = YES;
+    self.blueView.frame = self.containerView.bounds;
 	[self.containerView addSubview: self.blueView];
 //	[self.containerView addSubview: self.yellowView];
 //	self.yellowView.hidden = YES;

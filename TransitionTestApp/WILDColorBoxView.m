@@ -6,6 +6,9 @@
 //
 
 #import "WILDColorBoxView.h"
+#import <QuartzCore/QuartzCore.h>
+#import <CoreImage/CoreImage.h>
+
 
 @implementation WILDColorBoxView
 
@@ -37,6 +40,25 @@
     [super drawRect:dirtyRect];
     
     // Drawing code here.
+}
+
+-(id)	animationForKey: (NSString *)key
+{	
+	CATransition	*	ani = nil;
+	
+	if( [key isEqualToString: @"subviews"] )
+	{
+		ani = [CATransition animation];
+//		CIFilter	*	theFilter = [CIFilter filterWithName: @"CISwipeTransition"];
+//		[theFilter setDefaults];
+//		[theFilter setValue: [NSNumber numberWithDouble: -M_PI_4] forKey: kCIInputAngleKey];
+//		[ani setFilter: theFilter];
+		[ani setType: @"fade"];
+		[ani setDuration: 3.0];
+		//[ani setSubtype: @"fromLeft"];
+	}
+	
+	return ani;
 }
 
 @end

@@ -16,8 +16,8 @@
             <connections>
                 <outlet property="blueView" destination="7Fr-yh-Nef" id="byA-k6-Ke1"/>
                 <outlet property="containerView" destination="Psd-7O-inQ" id="LP9-mW-ocA"/>
-                <outlet property="cyanView" destination="xAS-1D-KZO" id="5wF-v4-R0F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="yellowView" destination="xAS-1D-KZO" id="5wF-v4-R0F"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -692,7 +692,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psd-7O-inQ">
+                    <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psd-7O-inQ" customClass="WILDColorBoxView">
                         <rect key="frame" x="20" y="20" width="440" height="280"/>
                         <shadow key="shadow" blurRadius="8">
                             <size key="offset" width="8" height="8"/>
@@ -719,6 +719,11 @@ AAAAAAACkQ
 </mutableData>
                             </caTransition>
                         </animations>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </customView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TPC-A9-VBq">
                         <rect key="frame" x="19" y="318" width="88" height="23"/>

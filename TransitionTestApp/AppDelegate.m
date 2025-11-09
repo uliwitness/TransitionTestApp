@@ -13,17 +13,36 @@
 @property (strong) IBOutlet NSWindow *window;
 
 @property (strong) IBOutlet NSView *containerView;
-@property (strong) IBOutlet NSView *cyanView;
+@property (strong) IBOutlet NSView *yellowView;
 @property (strong) IBOutlet NSView *blueView;
 @end
 
 @implementation AppDelegate
 
 - (IBAction)toggleTransition:(id)sender {
-	if (self.cyanView.superview == nil) {
-		self.containerView.animator.subviews = @[self.cyanView];
+	// This does the transitionDuration, but I see no transition:
+//	if (self.yellowView.superview == nil) {
+//		 self.containerView.animator.subviews = @[self.yellowView];
+//	} else {
+//		 self.containerView.animator.subviews = @[self.blueView];
+//	}
+
+	// No worky either:
+//	if (self.yellowView.hidden) {
+//		self.yellowView.animator.hidden = NO;
+//		self.blueView.animator.hidden = YES;
+//	} else {
+//		self.yellowView.animator.hidden = YES;
+//		self.blueView.animator.hidden = NO;
+//	}
+
+	// This seems to work:
+	if (self.yellowView.superview == nil) {
+		[self.containerView.animator addSubview: self.yellowView];
+		[self.blueView.animator removeFromSuperview];
 	} else {
-		self.containerView.animator.subviews = @[self.blueView];
+		[self.containerView.animator addSubview: self.blueView];
+		[self.yellowView.animator removeFromSuperview];
 	}
 }
 
@@ -32,7 +51,10 @@
 }
 
 - (void) awakeFromNib {
-	[self.containerView.animator addSubview: self.blueView];
+	self.window.contentView.wantsLayer = YES;
+	[self.containerView addSubview: self.blueView];
+//	[self.containerView addSubview: self.yellowView];
+//	self.yellowView.hidden = YES;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

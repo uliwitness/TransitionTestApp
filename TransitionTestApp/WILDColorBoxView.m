@@ -36,12 +36,6 @@
 	self.layer.backgroundColor = color.CGColor;
 }
 
--(void) drawRect: (NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-}
-
 -(id)	animationForKey: (NSString *)key
 {	
 	CATransition	*	ani = nil;

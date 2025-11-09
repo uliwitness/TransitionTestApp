@@ -43,12 +43,12 @@
 	if( [key isEqualToString: @"subviews"] )
 	{
 		ani = [CATransition animation];
-//		CIFilter	*	theFilter = [CIFilter filterWithName: @"CISwipeTransition"];
-//		[theFilter setDefaults];
-//		[theFilter setValue: [NSNumber numberWithDouble: -M_PI_4] forKey: kCIInputAngleKey];
-//		[ani setFilter: theFilter];
-		[ani setType: @"fade"];
-		[ani setDuration: 3.0];
+		CIFilter	*	theFilter = [CIFilter filterWithName: @"CISwipeTransition"];
+		[theFilter setDefaults];
+		[theFilter setValue: [NSNumber numberWithDouble: -M_PI_2] forKey: kCIInputAngleKey];
+		[ani setFilter: theFilter];
+//		[ani setType: @"fade"];
+		[ani setDuration: 1.0];
 		//[ani setSubtype: @"fromLeft"];
 	}
 	
